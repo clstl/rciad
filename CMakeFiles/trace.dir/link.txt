@@ -1,0 +1,1 @@
+clang++    -std=c++14 -g -O3 -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/trace.dir/src/main.cpp.o  -o trace -F/Library/Frameworks  -framework sfml-system -framework sfml-window -framework sfml-graphics -Wl,-rpath,/Library/Frameworks 
