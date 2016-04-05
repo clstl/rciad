@@ -3,7 +3,7 @@ project(ray)
 cmake_minimum_required(VERSION 2.8)
 
 # Release mode
-if(CMAKE_BUILD_TYPE STREQUAL "")
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
     set(CMAKE_BUILD_TYPE Release)
     set(CMAKE_CXX_COMPILER clang++)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -g -O3")
@@ -25,7 +25,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 # Define sources and executable
 set(EXECUTABLE_NAME "trace")
 file(GLOB SRC_FILES src/*)
-add_executable(${EXECUTABLE_NAME} ${SRC_FILES})
+add_executable(${EXECUTABLE_NAME} ${SRC_FILES} src/hitable.hpp src/sphere.hpp src/hitable_list.hpp src/camera.hpp)
 
 
 # Detect and add SFML
